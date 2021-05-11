@@ -52,8 +52,8 @@ def query_mhci_binding(method: str, sequence: Union[str, list], allele: Union[st
         data=data
     )
 
-    if res.status_code != 200:
-        print('Error: Query returned non-200 status code.')
+    if not res.text.startswith('allele'):
+        print(f'API returned error: {res.text}')
         return None
 
     # Format response data
@@ -119,8 +119,8 @@ def query_mhcii_binding(method: str, sequence: Union[str, list], allele: Union[s
         data=data
     )
 
-    if res.status_code != 200:
-        print('Error: Query returned non-200 status code.')
+    if not res.text.startswith('allele'):
+        print(f'API returned error: {res.text}')
         return None
 
     # Format response data
@@ -194,8 +194,8 @@ def query_tcell_epitope(method: str, sequence: Union[str, list], allele: Union[s
         data=data
     )
 
-    if res.status_code != 200:
-        print('Error: Query returned non-200 status code.')
+    if not res.text.startswith('allele'):
+        print(f'API returned error: {res.text}')
         return None
 
     # Format response data
@@ -263,8 +263,8 @@ def query_peptide_prediction(method: str, sequence: Union[str, list], allele: Un
         data=data
     )
 
-    if res.status_code != 200:
-        print('Error: Query returned non-200 status code.')
+    if not res.text.startswith('allele'):
+        print(f'API returned error: {res.text}')
         return None
 
     # Format response data
@@ -338,8 +338,8 @@ def query_bcell_epitope(method: str, sequence: Union[str, list], window_size: in
         data=data
     )
 
-    if res.status_code != 200:
-        print('Error: Query returned non-200 status code.')
+    if not res.text.startswith('Position'):
+        print(f'API returned error: {res.text}')
         return None
 
     # Format response data

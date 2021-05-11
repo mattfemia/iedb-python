@@ -1,11 +1,13 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name = "iedb",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Matt Femia",
     description = "Python SDK for IEDB Tools API. Full details can be found at \
     http://tools.iedb.org/main/tools-api/",
@@ -15,9 +17,8 @@ setup(
     packages = ['iedb', 'tests'],
     install_requires=['pandas>=1.0.0', 'requests>=2.22.0'],
     python_requires = '>=3.6',
-    long_description = 'Python SDK for IEDB Tools API. Includes API support \
-    for the following tools: MHC-I and MHC-II binding, MHC-I processing and \
-    MHC-NP predictions for T-cell epitopes.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",

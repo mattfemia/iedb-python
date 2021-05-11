@@ -1,5 +1,9 @@
 
 # IEDB API Tools Python SDK  
+
+[![PyPI version fury.io](https://badge.fury.io/py/iedb.svg)](https://pypi.python.org/pypi/iedb/)
+[![Build Status](https://www.travis-ci.com/mattfemia/iedb-python.svg?branch=master)](https://www.travis-ci.com/mattfemia/iedb-python)
+[![codecov](https://codecov.io/gh/mattfemia/iedb-python/branch/master/graph/badge.svg?token=WKDI6ZLK0I)](https://codecov.io/gh/mattfemia/iedb-python)
   
 ### Python SDK for Immune Epitope Database (IEDB) Analysis Tools API. Includes support for the following prediction tools:  
   
